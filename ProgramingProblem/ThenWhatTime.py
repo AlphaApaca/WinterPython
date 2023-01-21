@@ -8,19 +8,26 @@ def judge(a):
     elif a / 10 == 0:
         print("00{}".format(a))
 
+def pt(time, nmin):
+    print('\n')
+    print(time / 100 + (nmin / 60))
+    print('\n')
+    print((time % 100 + nmin % 60) / 60)
+    print('\n')
+    print(time % 100 + nmin % 60)
+
+
+
 str = input().split(" ")
 time = int(str[0])
 nmin = int(str[1])
 
-# p = int(time % 100)
-# y = int(next % 60)
-
 if (time % 100 + nmin % 60) >= 0:
             a = ((time / 100 + (nmin / 60)) + (time % 100 + nmin % 60) / 60) * 100 + (time % 100 + nmin % 60) % 60
             judge(a)
+            pt(time, nmin)
 else:
     a = ((time / 100 + (nmin / 60)) + ((time % 100 + nmin % 60) / 60 - 1)) * 100 + 60 + (time % 100 + nmin % 60)
     judge(a)
-# 离谱的事情出现了，怎么会有相同的运算式不一样的结果的
-# 明天早上起来再搞
-# 直接一个晚的安
+    pt(time, nmin)
+# 6, python 对整数的除法居然带小数点的
