@@ -8,26 +8,23 @@ def judge(a):
     elif a / 10 == 0:
         print("00{}".format(a))
 
-def pt(time, nmin):
-    print('\n')
-    print(time / 100 + (nmin / 60))
-    print('\n')
-    print((time % 100 + nmin % 60) / 60)
-    print('\n')
-    print(time % 100 + nmin % 60)
-
-
+# def pt(time, nmin):
+#     print('\n')
+#     print(time // 100 + (nmin // 60))
+#     print('\n')
+#     print((time % 100 + nmin % 60) // 60)
+#     print('\n')
+#     print(time % 100 + nmin % 60)
 
 str = input().split(" ")
 time = int(str[0])
 nmin = int(str[1])
 
 if (time % 100 + nmin % 60) >= 0:
-            a = ((time / 100 + (nmin / 60)) + (time % 100 + nmin % 60) / 60) * 100 + (time % 100 + nmin % 60) % 60
+            a = ((time // 100 + (nmin // 60)) + (time % 100 + nmin % 60) // 60) * 100 + (time % 100 + nmin % 60) % 60
             judge(a)
-            pt(time, nmin)
+#           pt(time, nmin)
 else:
-    a = ((time / 100 + (nmin / 60)) + ((time % 100 + nmin % 60) / 60 - 1)) * 100 + 60 + (time % 100 + nmin % 60)
+    a = ((time // 100 + (nmin // 60)) + ((time % 100 + nmin % 60) // 60 - 1)) * 100 + 60 + (time % 100 + nmin % 60)
     judge(a)
-    pt(time, nmin)
-# 6, python 对整数的除法居然带小数点的
+#   pt(time, nmin)
