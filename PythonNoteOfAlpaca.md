@@ -82,13 +82,13 @@ def swap(arr, i, j):
         arr[j] = temp
 
 def bubbleSort(arr, k):
-        for k in arr:
-            for j in arr: 
+        for k in range(len(arr)):
+            for j in range(len(arr)-1): 
                 if (arr[j] > arr[j + 1]):
                     swap(arr, j, j + 1)
 
 def printArray(arr):
-    for i in arr:
+    for i in range(len(arr)):
         if(i!=0):
             print(" ")
         print(arr[i])
@@ -96,9 +96,13 @@ def printArray(arr):
 str0 = input().split(" +")
 n = int(str0[0])
 k = int(str0[1])-1
-arr = int(input().split(" +"))
-# 读取数据还有点问题
+arr = input().split(" +")
+for i in range(len(arr)):
+    arr[i] = int(arr[i])
+# arr = int(input().split(" +"))错误
+# TypeError: int() argument must be a string, a bytes-like object or a real number, not 'list'
 bubbleSort(arr, k)
-printArray(arr)
+print(arr)
+# printArray(arr)
 ```
 
