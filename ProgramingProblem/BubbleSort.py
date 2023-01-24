@@ -4,7 +4,7 @@ def swap(arr, i, j):
         arr[j] = temp
 
 def bubbleSort(arr, k):
-        for k in range(len(arr)):
+        for i in range(k):
             for j in range(len(arr)-1): 
                 if (arr[j] > arr[j + 1]):
                     swap(arr, j, j + 1)
@@ -17,7 +17,7 @@ def printArray(arr):
 
 str0 = input().split(" ")
 n = int(str0[0])
-k = int(str0[1])-1
+k = int(str0[1])
 arr = input().split(" ")
 
 for i in range(len(arr)):
