@@ -110,3 +110,15 @@ print(arr)
 # printArray(arr)
 ```
 
+## 1.Python 基础知识
+
+#### lambda匿名函数（临时使用）
+
+```python
+def test_func(compute):
+    result = computer(1,2)
+    print(f"结果是:{result}")
+    
+test_fun(lambda x, y: x + y)
+```
+
